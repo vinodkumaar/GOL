@@ -35,7 +35,7 @@ public class GridTest {
 
     @Test
     public void shouldBeAbleToSendAPulseAndChangeAGenerationForToadPattern() {
-        String toadPattern = "- - - -\n" +
+        String toadPattern =    "- - - -\n" +
                                 "- + + +\n" +
                                 "+ + + -\n" +
                                 "- - - -" ;
