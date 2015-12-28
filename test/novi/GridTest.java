@@ -35,11 +35,11 @@ public class GridTest {
 
     @Test
     public void shouldBeAbleToSendAPulseAndChangeAGenerationForToadPattern() {
-        String blinkerPattern = "- - - -\n" +
+        String toadPattern = "- - - -\n" +
                                 "- + + +\n" +
                                 "+ + + -\n" +
                                 "- - - -" ;
-        Grid grid = new Grid(blinkerPattern);
+        Grid grid = new Grid(toadPattern);
         assertEquals("- - + -\n" +
                      "+ - - +\n" +
                      "+ - - +\n" +
