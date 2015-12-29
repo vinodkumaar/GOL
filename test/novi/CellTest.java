@@ -67,6 +67,14 @@ public class CellTest {
         assertFalse(deadCell.nextGeneration().isAlive());
     }
 
+    @Test
+    public void shouldNotDieInTheNextGenerationIfThereAreThreeLiveNeighbours() {
+        Cell liveCell = new Cell("+");
+
+        addNeighbours(liveCell, "+","+","+","-");
+        assertTrue(liveCell.nextGeneration().isAlive());
+    }
+
     private void addNeighbours(Cell cell, String... statuses) {
         for (String status : statuses) {
             cell.knowYourNeighbour(new Cell(status));

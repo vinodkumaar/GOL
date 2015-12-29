@@ -30,7 +30,7 @@ public class Cell {
 
     public Cell nextGeneration() {
         if (alive) {
-            return new Cell(liveNeighbours.size() > 1 && liveNeighbours.size() < 3);
+            return new Cell(liveNeighbours.size() > 1 && liveNeighbours.size() < 4);
         } else {
             return new Cell(liveNeighbours.size() == 3);
         }
