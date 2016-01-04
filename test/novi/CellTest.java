@@ -36,7 +36,7 @@ public class CellTest {
     public void shouldDieInTheNextGenerationIfThereAreMoreThanThreeLiveNeighbours() {
         Cell liveCell = new Cell("+");
 
-        addNeighbours(liveCell, "+","+","+","+","-");
+        addNeighbours(liveCell, "+","+","+","+","+","-");
         assertFalse(liveCell.nextGeneration().isAlive());
     }
 

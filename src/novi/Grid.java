@@ -1,16 +1,18 @@
 package novi;
 
+import com.sun.org.apache.bcel.internal.generic.NEW;
+
 public class Grid {
     private Cell[][] cells;
     private final String WHITE_SPACE = " ";
     private final String NEW_LINE = "\n";
 
     public Grid(String inputPattern) {
-        String[] rows = inputPattern.split("\n");
-        String[] columns = rows[0].split(" ");
+        String[] rows = inputPattern.split(NEW_LINE);
+        String[] columns = rows[0].split(WHITE_SPACE);
         cells = new Cell[rows.length][columns.length];
         for (int row = 0; row < rows.length; row++) {
-            columns = rows[row].split(" ");
+            columns = rows[row].split(WHITE_SPACE);
             for (int column = 0; column < columns.length; column++) {
                 cells[row][column] = new Cell(columns[column]);
             }
